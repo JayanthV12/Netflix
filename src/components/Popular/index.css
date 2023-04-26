@@ -1,0 +1,47 @@
+.failure-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-image {
+  height: 276.0001220703125px;
+  width: 375.0012512207031px;
+  left: 532px;
+  top: 307px;
+  border-radius: 0px;
+  margin-bottom: 12px;
+}
+.failure-heading {
+  font-family: 'Roboto';
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
+}
+.failure-button {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px;
+  border-width: 0px;
+}
+.popular-container {
+  background-color: black;
+  min-height: 100vh;
+}
+.popular-image {
+  height: 200px;
+  width: 200px;
+  margin-right: 12px;
+}
+.list-popular {
+  list-style-type: none;
+}
+.popular-movies-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px;
+}

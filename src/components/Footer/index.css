@@ -1,0 +1,29 @@
+.icon {
+  height: 21px;
+  width: 18px;
+  left: 648px;
+  top: 1231px;
+  margin-right: 20px;
+  color: white;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact {
+  height: 24px;
+  width: 80px;
+  left: 680px;
+  top: 1268px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 500;
+}

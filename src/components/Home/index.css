@@ -1,0 +1,51 @@
+.try-button {
+  height: 32px;
+  width: 94px;
+  left: 673.5px;
+  top: 401px;
+  border-radius: 3px;
+}
+.trending-container {
+  background-color: black;
+  padding: 20px;
+}
+.trending-heading {
+  color: white;
+  font-family: 'Roboto';
+}
+.random {
+  height: 605px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  padding-bottom: 20px;
+  border-radius: 0px;
+  background-size: cover;
+}
+.title-random {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-left: 20px;
+}
+.title {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.overview {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+.play {
+  border-radius: 10px;
+  padding: 12px;
+  border-width: 0px;
+  height: 40px;
+  width: 100px;
+}
