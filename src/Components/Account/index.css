@@ -1,0 +1,75 @@
+.header {
+  background-color: black;
+  height: 103px;
+}
+.account {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+}
+.account-heading {
+  font-family: 'Roboto';
+  font-size: 32px;
+  color: black;
+  font-weight: 1000;
+}
+.line {
+  background: rgba(203, 213, 225, 1);
+  height: 2px;
+  width: 1445px;
+  left: 165px;
+  top: 238px;
+  border-radius: 10px;
+}
+
+.member-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.member-heading {
+  font-family: 'Roboto';
+  font-size: 24px;
+  color: grey;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.plan {
+  display: flex;
+  flex-direction: row;
+}
+.email1 {
+  height: 30px;
+  width: 100px;
+  left: 443px;
+  top: 391px;
+  font-size: 22px;
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+  border: 1px solid rgba(30, 41, 59, 1);
+}
+.email {
+  font-family: HK Grotesk;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  margin-left: 20px;
+  text-align: left;
+}
+.logout-button {
+  height: 40px;
+  width: 89px;
+  left: 675px;
+  top: 508px;
+  border-radius: 4px;
+  padding: 8px 20px 8px 20px;
+  background-color: red;
+  color: white;
+  border-width: 0px;
+  text-align: center;
+  align-self: center;
+  margin-top: 20px;
+}

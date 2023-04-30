@@ -2,6 +2,11 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import SliderMovies from '../SliderMovies'
+import Header from '../Header'
+import Footer from '../Footer'
+import Trending from '../Trending'
+import TopRated from '../TopRated'
+
 import './index.css'
 
 const apiStatus = {
@@ -11,19 +16,19 @@ const apiStatus = {
   failure: 'FAILURE',
 }
 
-class Trending extends Component {
+class Home extends Component {
   state = {
     activeStatus: apiStatus.initial,
-    trendingList: '',
+    originalList: '',
   }
 
   componentDidMount() {
-    this.getTrendingList()
+    this.getOriginalList()
   }
 
-  getTrendingList = async () => {
+  getOriginalList = async () => {
     this.setState({activeStatus: apiStatus.progress})
-    const apiUrl = 'https://apis.ccbp.in/movies-app/trending-movies'
+    const apiUrl = 'https://apis.ccbp.in/movies-app/originals'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',
@@ -43,7 +48,7 @@ class Trending extends Component {
     if (response.ok) {
       this.setState({
         activeStatus: apiStatus.success,
-        trendingList: formattedData,
+        originalList: formattedData,
       })
     } else {
       this.setState({activeStatus: apiStatus.failure})
@@ -51,12 +56,12 @@ class Trending extends Component {
   }
 
   renderSuccessView = () => {
-    const {trendingList} = this.state
+    const {originalList} = this.state
     return (
       <div className="trending-container">
-        <h1 className="trending-heading">Trending Now</h1>
+        <h1 className="trending-heading">Originals</h1>
 
-        <SliderMovies movies={trendingList} />
+        <SliderMovies movies={originalList} />
       </div>
     )
   }
@@ -69,7 +74,7 @@ class Trending extends Component {
 
   renderFailureView = () => {
     const onTry = () => {
-      this.getTrendingList()
+      this.getOriginalList()
     }
     return (
       <div>
@@ -77,7 +82,7 @@ class Trending extends Component {
           src="https://ik.imagekit.io/aqitzrbrj1/alert-triangle.jpg?updatedAt=1682142619120"
           alt="failure view"
         />
-        <p>Something Went Wrong</p>
+        <p>Something Went Wrong. Please try again</p>
         <button type="button" className="try-button" onClick={onTry}>
           Try Again
         </button>
@@ -101,8 +106,35 @@ class Trending extends Component {
   }
 
   render() {
-    return this.renderOutputView()
+    const {originalList} = this.state
+    const randomNumber = Math.ceil(Math.random() * originalList.length)
+
+    const randomPoster = originalList[randomNumber]
+    const image = {...randomPoster}
+    const {backdropPath, title, overview} = image
+
+    return (
+      <>
+        <div
+          style={{backgroundImage: `url(${backdropPath})`}}
+          className="random"
+        >
+          <Header />
+          <div className="title-random">
+            <h1 className="title">{title}</h1>
+            <h1 className="overview">{overview}</h1>
+            <button type="button" className="play">
+              Play
+            </button>
+          </div>
+        </div>
+
+        <Trending />
+        {this.renderOutputView()}
+        <TopRated />
+        <Footer />
+      </>
+    )
   }
 }
-
-export default Trending
+export default Home

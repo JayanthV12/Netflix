@@ -2,11 +2,6 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import SliderMovies from '../SliderMovies'
-import Header from '../Header'
-import Footer from '../Footer'
-import Trending from '../Trending'
-import TopRated from '../TopRated'
-
 import './index.css'
 
 const apiStatus = {
@@ -16,19 +11,19 @@ const apiStatus = {
   failure: 'FAILURE',
 }
 
-class Home extends Component {
+class Trending extends Component {
   state = {
     activeStatus: apiStatus.initial,
-    originalList: '',
+    trendingList: '',
   }
 
   componentDidMount() {
-    this.getOriginalList()
+    this.getTrendingList()
   }
 
-  getOriginalList = async () => {
+  getTrendingList = async () => {
     this.setState({activeStatus: apiStatus.progress})
-    const apiUrl = 'https://apis.ccbp.in/movies-app/originals'
+    const apiUrl = 'https://apis.ccbp.in/movies-app/trending-movies'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       method: 'GET',
@@ -48,7 +43,7 @@ class Home extends Component {
     if (response.ok) {
       this.setState({
         activeStatus: apiStatus.success,
-        originalList: formattedData,
+        trendingList: formattedData,
       })
     } else {
       this.setState({activeStatus: apiStatus.failure})
@@ -56,12 +51,12 @@ class Home extends Component {
   }
 
   renderSuccessView = () => {
-    const {originalList} = this.state
+    const {trendingList} = this.state
     return (
       <div className="trending-container">
-        <h1 className="trending-heading">Originals</h1>
+        <h1 className="trending-heading">Trending Now</h1>
 
-        <SliderMovies movies={originalList} />
+        <SliderMovies movies={trendingList} />
       </div>
     )
   }
@@ -82,7 +77,7 @@ class Home extends Component {
           src="https://ik.imagekit.io/aqitzrbrj1/alert-triangle.jpg?updatedAt=1682142619120"
           alt="failure view"
         />
-        <p>Something Went Wrong</p>
+        <p>Something Went Wrong. Please try again</p>
         <button type="button" className="try-button" onClick={onTry}>
           Try Again
         </button>
@@ -106,35 +101,8 @@ class Home extends Component {
   }
 
   render() {
-    const {originalList} = this.state
-    const randomNumber = Math.ceil(Math.random() * originalList.length)
-
-    const randomPoster = originalList[randomNumber]
-    const image = {...randomPoster}
-    const {backdropPath, title, overview} = image
-
-    return (
-      <>
-        <div
-          style={{backgroundImage: `url(${backdropPath})`}}
-          className="random"
-        >
-          <Header />
-          <div className="title-random">
-            <h1 className="title">{title}</h1>
-            <p className="overview">{overview}</p>
-            <button type="button" className="play">
-              Play
-            </button>
-          </div>
-        </div>
-
-        <Trending />
-        {this.renderOutputView()}
-        <TopRated />
-        <Footer />
-      </>
-    )
+    return this.renderOutputView()
   }
 }
-export default Home
+
+export default Trending

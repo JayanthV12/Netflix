@@ -60,15 +60,15 @@ class Popular extends Component {
         {popularList.map(each => {
           const {id} = each
           return (
-            <Link to={`movies/${id}`}>
-              <li key={each.id} className="list-popular">
+            <li key={each.id} className="list-popular">
+              <Link to={`movies/${id}`}>
                 <img
                   src={each.posterPath}
-                  alt="popular movie"
+                  alt={each.title}
                   className="popular-image"
                 />
-              </li>
-            </Link>
+              </Link>
+            </li>
           )
         })}
       </ul>

@@ -117,13 +117,9 @@ class MovieDetails extends Component {
                 {hours}h {minutes}m
               </p>
               {adult ? (
-                <button className="adult" type="button">
-                  A
-                </button>
+                <p className="adult">A</p>
               ) : (
-                <button className="adult" type="button">
-                  U/A
-                </button>
+                <p className="adult">U/A</p>
               )}
               <p className="overview">{year}</p>
             </div>
@@ -138,7 +134,7 @@ class MovieDetails extends Component {
             <h1 className="genre-heading">Genres</h1>
             {genres.map(each => (
               <li key={each.id} className="genre">
-                {each.name}
+                <p>{each.name}</p>
               </li>
             ))}
           </ul>
@@ -146,28 +142,28 @@ class MovieDetails extends Component {
             <h1 className="genre-heading">Audio Available</h1>
             {languages.map(each => (
               <li key={each.id} className="genre">
-                {each.englishName}
+                <p>{each.englishName}</p>
               </li>
             ))}
           </ul>
           <div className="ratings-container">
             <ul>
               <h1 className="genre-heading">Rating Count</h1>
-              <li className="genre">{voteCount}</li>
+              <p className="genre">{voteCount}</p>
             </ul>
             <ul>
               <h1 className="genre-heading">Rating Average</h1>
-              <li className="genre">{voteAverage}</li>
+              <p className="genre">{voteAverage}</p>
             </ul>
           </div>
           <div className="ratings-container">
             <ul>
               <h1 className="genre-heading">Budget</h1>
-              <li className="genre">{budget}</li>
+              <p className="genre">{budget}</p>
             </ul>
             <ul>
               <h1 className="genre-heading">Release Date</h1>
-              <li className="genre">{date}</li>
+              <p className="genre">{date}</p>
             </ul>
           </div>
         </div>

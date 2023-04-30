@@ -22,6 +22,12 @@
   flex-direction: row;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+}
+
 .route-buttons {
   background-color: transparent;
   color: white;
@@ -48,11 +54,41 @@
   border-radius: 0px;
   margin-right: 12px;
 }
+.play-icon {
+  height: 36px;
+  width: 36px;
+  color: white;
+}
 .avatar {
   border-radius: 50%;
   margin-left: 12px;
 }
 .avatar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  background-color: transparent;
+  border-width: 0px;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.mobile-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+.mobile-search {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

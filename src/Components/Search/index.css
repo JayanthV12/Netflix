@@ -1,0 +1,149 @@
+.nav-container1 {
+  height: 103px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 0px;
+  background-color: black;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+  .nav-container1 {
+    display: none;
+  }
+}
+.avatar1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+  align-self: center;
+}
+.mobile-nav1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.logo-image1 {
+  height: 30px;
+
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav1 {
+    display: none;
+  }
+}
+
+.search-page {
+  background-color: black;
+  min-height: 100vh;
+}
+.search-icon1 {
+  color: white;
+  height: 34px;
+  width: 34px;
+  left: 0px;
+  top: 0px;
+  align-self: center;
+  border-radius: 0px;
+  margin-right: 12px;
+  margin-top: 12px;
+  background-color: grey;
+}
+.input-search {
+  height: 30px;
+  width: 100px;
+  margin-right: 100px;
+  border-radius: 12px;
+  border-color: white;
+  border-width: 2px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.buttons {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-width: 0px;
+}
+.input-mobile {
+  height: 30px;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: white;
+  color: white;
+}
+.buttons1 {
+  background-color: gray;
+
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-width: 0px;
+}
+.icons {
+  height: 24px;
+  width: 24px;
+}
+@media screen and (max-width: 768px) {
+  .input-search {
+    margin-right: 12px;
+    width: 80px;
+    height: 20px;
+  }
+}
+.inputEl {
+  background-color: transparent;
+  border-width: 2px;
+  border-color: white;
+  margin-right: 0px;
+}
+
+.not-found-container1 {
+  background-color: black;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popular-image1 {
+  height: 200px;
+  width: 200px;
+  margin: 12px;
+}
+@media screen and (max-width: 768px) {
+  .popular-image1 {
+    height: 150px;
+    width: 150px;
+    margin: 12px;
+  }
+}
+.mobile-search1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.popular-movies-list1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 12px;
+}
+.mobile-nav-container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

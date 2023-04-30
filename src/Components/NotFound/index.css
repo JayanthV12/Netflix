@@ -1,0 +1,33 @@
+.not-found-container {
+  background-image: url('https://ik.imagekit.io/aqitzrbrj1/snow-removal-machine-working-high-ski-slope-snowstorm_454047-2149_1.jpg?updatedAt=1682142533390');
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-heading {
+  font-family: 'Roboto';
+  font-size: 49px;
+  font-weight: 700;
+  color: white;
+}
+.not-found-para {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}
+
+.not-found-button {
+  height: 48px;
+  width: 127px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+  border-width: 0px;
+  font-family: 'Roboto';
+}

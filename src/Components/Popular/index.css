@@ -35,6 +35,13 @@
   width: 200px;
   margin-right: 12px;
 }
+@media screen and (max-width: 768px) {
+  .popular-image {
+    height: 100px;
+    width: 100px;
+    margin-right: 12px;
+  }
+}
 .list-popular {
   list-style-type: none;
 }
