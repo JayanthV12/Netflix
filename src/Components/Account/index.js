@@ -11,11 +11,11 @@ const Account = props => {
     history.replace('/login')
   }
   return (
-    <>
+    <div className="account12">
       <div className="header">
         <Header />
       </div>
-      <div className="account">
+      <div className="account1">
         <h1 className="account-heading">Account</h1>
         <hr className="line" />
         <div className="member-details">
@@ -39,7 +39,7 @@ const Account = props => {
         </button>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

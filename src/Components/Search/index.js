@@ -201,8 +201,8 @@ class Search extends Component {
                 className="logo-image1"
               />
             </Link>
-            <div>
-              <>
+            <div className="total">
+              <div className="mobile-search1">
                 <input
                   type="search"
                   className="input-mobile"
@@ -216,13 +216,13 @@ class Search extends Component {
                 >
                   <HiOutlineSearch className="icons" />
                 </button>
-              </>
+              </div>
               <button
                 type="button"
                 className="buttons"
                 onClick={this.onIconClick}
               >
-                <MdPlaylistPlay className="icons" />
+                <MdPlaylistPlay className="play-icon" />
               </button>
             </div>
           </div>

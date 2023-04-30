@@ -2,11 +2,19 @@
   background-color: black;
   height: 103px;
 }
-.account {
+.account1 {
   margin: 40px;
   display: flex;
   flex-direction: column;
   height: 65vh;
+}
+.account12 {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .account1 {
+    max-width: 768px;
+  }
 }
 .account-heading {
   font-family: 'Roboto';
@@ -21,6 +29,11 @@
   left: 165px;
   top: 238px;
   border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .line {
+    width: 100%;
+  }
 }
 
 .member-details {
